@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SignInForm from '../layouts/SignInForm.astro';
+---
+
+<Layout title="Sign In">
+	<main>
+		<SignInForm />
+	</main>
+</Layout>
+
+<style>
+	main {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(135deg, #e0f7fa 0%, #bbdefb 100%);
+		padding: 1rem;
+	}
+</style>

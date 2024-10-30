@@ -1,0 +1,130 @@
+---
+import SocialButtons from './SocialButtons.astro';
+import InputField from './InputField.astro';
+---
+
+<div class="form-container">
+  <div class="icon-container">
+   <img src="./icon.png" alt="">
+    </svg>
+  </div>
+  
+  <h1>Sign in with email</h1>
+  <p>Make a new doc to bring your words, data, and teams together. For free</p>
+  
+  <form class="signin-form">
+    <InputField type="email" placeholder="Email" />
+    <InputField type="password" placeholder="Password" />
+    
+    <div class="forgot-password">
+      <a href="#">Forgot password?</a>
+    </div>
+    
+    <button type="submit" class="submit-btn">Get Started</button>
+  </form>
+  
+  <div class="divider">
+    <span>Or sign in with</span>
+  </div>
+  
+  <SocialButtons />
+</div>
+
+<style>
+  .form-container {
+    padding: 1.5rem; /* Reduced padding */
+    border-radius: 0.75rem; /* Adjusted border radius */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 350px; /* Reduced max width */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .icon-container {
+    background: transparent;
+    width: 48px; /* Increased width for larger radius */
+    height: 48px; /* Increased height for larger radius */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem; /* Adjusted margin */
+    margin-bottom:-2px;
+  }
+
+  h1 {
+    font-size: 1.25rem; /* Reduced font size */
+    font-weight: 600;
+    margin-bottom: 0.25rem; /* Reduced margin */
+    color: #1a1a1a;
+  }
+
+  p {
+    color: #666;
+    margin-bottom: 1rem; /* Reduced margin */
+    font-size: 0.85rem; /* Reduced font size */
+  }
+
+  .signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Reduced gap */
+    margin-right: 20px; /* Adjusted margin */
+  }
+
+  .forgot-password {
+    text-align: right;
+    left:10px;
+  }
+
+  .forgot-password a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.85rem; /* Reduced font size */
+    
+  }
+
+  .submit-btn {
+    background: #1a1a1a;
+    color: white;
+    padding: 0.5rem; /* Reduced padding */
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 0.9rem; /* Reduced font size */
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+  }
+
+  .submit-btn:hover {
+    background: #333;
+  }
+
+  .divider {
+    margin: 1rem 0; /* Reduced margin */
+    position: relative;
+    text-align: center;
+  }
+
+  .divider::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: #e5e7eb;
+  }
+
+  .divider span {
+    background: white;
+    padding: 0 0.75rem; /* Reduced padding */
+    color: #666;
+    font-size: 0.85rem; /* Reduced font size */
+    position: relative;
+  }
+</style>

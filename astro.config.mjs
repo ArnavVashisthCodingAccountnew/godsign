@@ -1,4 +1,7 @@
+
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://arnavvashisthcodingaccountnew.github.io/', // Set this to your GitHub Pages URL
+  base: '/godsign', // Only needed if your repo name doesn't match your domain
+});

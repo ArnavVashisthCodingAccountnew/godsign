@@ -1,0 +1,45 @@
+---
+const socialProviders = [
+  { name: 'Google', icon: 'https://www.google.com/favicon.ico' },
+  { name: 'Facebook', icon: 'https://www.facebook.com/favicon.ico' },
+  { name: 'Apple', icon: 'https://www.apple.com/favicon.ico' }
+];
+---
+
+<div class="social-buttons">
+  {socialProviders.map(provider => (
+    <button class={`social-btn ${provider.name.toLowerCase()}`}>
+      <img src={provider.icon} alt={provider.name} width="20" height="20">
+    </button>
+  ))}
+</div>
+
+<style>
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e5e7eb;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 0;
+  }
+
+  .social-btn:hover {
+    background: #f8f9fa;
+  }
+
+  .social-btn img {
+    object-fit: contain;
+  }
+</style>

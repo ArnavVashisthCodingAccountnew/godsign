@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a0b79457b8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap" rel="stylesheet">
+    <title>Form Example</title>
+    <style>
+        html, body {
+            height: 100%; /* Ensure the body takes up full height */
+            margin: 0; /* Remove default margin */
+            background-image: url('https://thumbs.dreamstime.com/b/pink-cloud-blue-sky-beautiful-pink-sky-pink-sunset-clouds-sky-full-moon-stars-dream-magic-evening-sky-moon-blue-300938218.jpg'); /* Background image */
+            background-size: cover; /* Cover the entire screen */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+        }
+
+        .section {
+            display: flex; /* Use flexbox for centering */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            height: 100vh; /* Full height of the viewport */
+            padding: 20px; /* Padding for extra spacing */
+            background-color: transparent;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for form */
+            padding: 30px; /* Padding for the form */
+            border-radius: 10px; /* Rounded corners */
+            max-width: 500px; /* Max width for the form */
+            width: 100%; /* Ensure the container takes full width */
+        }
+
+        /* Placeholder styles */
+        input::placeholder {
+            color: black; /* Change this to your desired color */
+            opacity: 1; /* Ensure opacity is 1 for full visibility */
+        }
+    </style>
+</head>
+<body>
+    <Layout>
+        <section class="section">
+            <div class="container">
+                <h1 style="color:black;font-family: 'Urbanist', serif;font-weight:500;font-size:18px;">Sign in with Email</h1>
+
+                <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                        <input style="background-color:#eff2f6;" class="input is" type="email" placeholder="Email" value="" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                        <input style='background-color:#eff2f6;' class="input is" type="password" placeholder="Password" required>
+                        <span class="icon is-small is-left">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field is-grouped is-grouped-centered">
+                    <div class="control">
+                        <button class="button is-link" type="submit">Submit</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-link is-light" type="button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </Layout>
+    <script>
+        // Your script can go here
+    </script>
+</body>
+</html>
