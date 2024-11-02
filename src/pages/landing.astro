@@ -1,0 +1,897 @@
+---
+const props = Astro.props
+---
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--Carousel example -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <style>
+        main {
+            background-color: white;  
+        
+        }
+      
+      
+        nav {
+            background-color: #1748EE;
+            width: 100%;
+            height: 60px;
+            position:relative;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .hero-nav-header {
+            color: #FFFCF8;
+            font-family: "Inter", sans-serif;
+            font-weight: 900;
+            font-size: 20px;
+            margin-top:0;
+            margin-left:40px;
+            display: block; /* Ensure the element behaves like a block element to respect margin */
+        }
+        .login-button{
+            margin-left:700px;
+            font-family: "DM Sans", serif;
+            font-optical-sizing: auto;
+            color:#FFFCF8;
+            border: 1px solid #FFFCF8; /* Set border width, style, and color */
+            border-radius:10px;
+            padding-top:6px;
+            padding-bottom:5px;
+            padding-right:14px;
+            padding-left:14px;
+            font-size:15px;
+            font-weight:700;
+        }
+        .getstarted-button{
+            margin-left:10px;
+            font-family: "DM Sans", serif;
+            font-optical-sizing: auto;
+            color:#1748EE;
+            border: 1px solid #FFFCF8; /* Set border width, style, and color */
+            border-radius:10px;
+            padding-top:6px;
+            padding-bottom:5px;
+            padding-right:14px;
+            padding-left:14px;
+            font-size:15px;
+            background-color:#FFFCF8;
+            font-weight:700;
+            margin-right:40px;
+        }
+        .info {
+            color: #1748EE;
+            font-family: "DM Sans", serif;
+            opacity:0.5;
+        }
+        .hero-section{
+          
+  position: relative;
+        }
+        .hero-img{
+            width:100vw;
+            height:auto;
+            position:relative;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .lorem{
+            color:#1748EE;
+            font-family: "DM Sans", serif;
+            font-weight:700;
+            line-height:109.2%;
+            word-wrap:break-word;
+            letter-spacing:-6%;
+            line-height:40.10px;
+            font-size: 36.11px;
+            margin-bottom:-90px;
+            margin-top:10px;
+
+        }
+        .lorem2{
+            color:#1748EE;
+            font-family: "DM Sans", serif;
+            font-weight:700;
+            line-height:109.2%;
+            word-wrap:break-word;
+            letter-spacing:-6%;
+            line-height:40.10px;
+            font-size: 36.11px;
+            margin-bottom:-90px;
+            margin-top:10px;
+           justify-content: center;
+           align-items: center;
+           align-self:center;
+           position:relative;
+           display:flex;
+           margin-bottom:20px;
+           
+        }
+        .lorem3{
+            color:#1748EE;
+            font-family: "DM Sans", serif;
+            font-weight:700;
+            line-height:109.2%;
+            letter-spacing:-6%;
+            line-height:40.10px;
+            font-size: 36.11px;
+            margin-bottom:-90px;
+            margin-top:10px;
+       
+           position:relative;
+           display:flex;
+           margin-bottom:20px;
+           
+        }
+        .lorem4{
+            color:#1748EE;
+            font-family: "DM Sans", serif;
+            font-weight:700;
+            line-height:109.2%;
+            letter-spacing:-6%;
+            line-height:40.10px;
+            font-size: 36.11px;
+            margin-bottom:-90px;
+            margin-top:40px;
+            align-self:center;
+            justify-content:center;
+            text-align: center;
+            align-items:center;
+           position:relative;
+           display:flex;
+           margin-bottom:20px;
+           
+        }
+        .squiggly{
+            width:200px;
+        }
+        .card-1 {
+            background-color:#2859FF;
+            width:280px;
+            height:370px;
+            transform: rotate(-0.021turn);
+            margin-left:100px;
+            margin-bottom:15px;
+            border-radius:10px;
+            margin-top:-10px;
+             box-shadow: 10px 10px;
+             position:relative;
+        }
+        .card-1 img{
+            position:relative;
+            top:-65px;
+        }
+        .card-1 h1{
+            position:relative;
+            bottom:110px;
+            margin-left:20px;
+            color:#FFFCF8;
+            font-family: "DM Sans", serif;
+            font-weight:600;
+            font-size:23px;
+            
+        }
+        .card-1 p{
+            position:relative;
+            bottom:110px;
+            margin-left:20px;
+            color:#FFFCF8;
+            font-family: "DM Sans", serif;
+            font-weight:400;
+            font-size:15px;
+        }
+        
+        .card-2 {
+background-color:#2859FF;
+width:280px;
+height:370px;
+margin-left:100px;
+margin-bottom:15px;
+border-radius:10px;
+margin-top:-10px;
+box-shadow: 10px 10px;
+position:relative;
+}
+.card-2 img{
+position:relative;
+top:-65px;
+}
+.card-2 h1{
+position:relative;
+bottom:110px;
+margin-left:20px;
+color:#FFFCF8;
+font-family: "DM Sans", serif;
+font-weight:600;
+font-size:23px;
+}
+.card-2 p{
+position:relative;
+bottom:110px;
+margin-left:20px;
+color:#FFFCF8;
+font-family: "DM Sans", serif;
+font-weight:400;
+font-size:15px;
+}
+.card-3 {
+background-color:#2859FF;
+width:280px;
+height:370px;
+transform: rotate(0.021turn);
+margin-left:100px;
+margin-bottom:15px;
+border-radius:10px;
+margin-top:-10px;
+box-shadow: 10px 10px;
+position:relative;
+margin-right:100px;
+}
+.card-3 img{
+position:relative;
+top:-65px;
+}
+.card-3 h1{
+position:relative;
+bottom:110px;
+margin-left:20px;
+color:#FFFCF8;
+font-family: "DM Sans", serif;
+font-weight:600;
+font-size:23px;
+}
+.card-3 p{
+position:relative;
+bottom:110px;
+margin-left:20px;
+color:#FFFCF8;
+font-family: "DM Sans", serif;
+font-weight:400;
+font-size:15px;
+}
+.features-1 {
+    display:flex;
+    justify-content:center;
+    margin-top:60px;
+    align-items:center;
+    align-self:center;
+    align-content: center;
+    margin-bottom:40px;
+}
+.lorem3 {
+margin-left:40px;
+}
+.divgod {
+            width: 100%;
+        
+            overflow-y:scroll;
+  overflow-x:auto;
+  white-space: nowrap;
+  padding-left:70px;
+}
+.withindivgod img{
+    width:250px;
+    height:350px;
+}
+.divgod2 {
+            width: 80%;
+            background-color:#1748EE;
+  white-space: nowrap;
+  padding-left:70px;
+  height:170px;
+  margin-bottom:10px;
+margin:auto;
+padding:10px;
+margin-bottom:15px;
+border-radius:13px;
+box-shadow:10px 10px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.divgod::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.divgod2 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.divgod2::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.divgod2 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.bluecard {
+    width: 180px;
+    transform: rotate(-0.051turn);
+    left:-28px;
+  height: 50px;
+  padding: 12px;
+  border-radius:8px;
+  background-color: #1748EE;
+  box-shadow: 6px 6px;
+  position:relative;
+bottom:-30px;
+text-align: center;
+
+}
+
+.bluecard p{
+    color:#FFFCF8;
+    font-family: "DM Sans", serif;
+    font-weight:600;
+    font-size:15px;
+    padding-top:4px;
+}
+.withindivgod {
+  margin-right: 35px;
+  height: 100%;
+  min-width: 100px;
+  display: inline-block;
+  vertical-align: top;
+ 
+}
+
+.btn-blue {
+    background-color:#1748EE; /* Button background color */
+    width: 40px; /* Adjusted width for a better button size */
+    height: 40px; /* Adjusted height for a better button size */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 15px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 3px 1px; /* Drop shadow */
+    margin-right:10px;
+}
+.faq-btn {
+    background-color:transparent; /* Button background color */
+    width: 40px; /* Adjusted width for a better button size */
+    height: 40px; /* Adjusted height for a better button size */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 15px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right:10px;
+    border-style:solid;
+    border-color:#1748EE;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: transparent !important;
+}
+.carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    border: 2px solid #1748EE !important;  /* Combined border properties */
+    background-color: transparent !important;  /* Changed to transparent to see border */
+    margin: 0 5px !important;
+    padding: 0 !important;
+    opacity: 0.5;
+}
+
+.carousel-indicators button.active {
+    background-color: #1748EE !important;  /* Fill with color when active */
+    opacity: 1;
+}
+.faq-section {
+    margin-top:70px;
+}
+
+.cardk{
+    width:80vw;
+    height:70px;
+    border-style:solid;
+    border-color:#1748EE;
+    text-align:justify;
+    margin:auto;    
+    margin-bottom:20px;
+
+}
+.card {
+    width: 80vw;
+    height: 70px;
+    border-style: solid;
+    border-color: #1748EE;
+    text-align: justify;
+    margin: auto;    
+    margin-bottom: 20px;
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.card p {
+    margin-left: 30px;
+    margin-top: 20px;
+    color: #1748EE;
+    font-weight: 600;
+    font-family: 'DM Sans', serif;
+}
+
+.card .answer {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card.expanded .answer {
+    opacity: 1;
+}
+
+.faq-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card.expanded .faq-btn {
+    transform: rotate(180deg);
+    background-color:#456cf0;
+
+
+}
+.card.expanded{
+    background-color:#1748EE;
+    box-shadow:10px 10px;
+}
+.footer {
+    background-color:#1748EE;
+    height:70px;
+    font-weight:500;
+    color:#FFFCF8;
+    justify-content:center;
+    text-align:center;
+    align-self:center;
+    width:98.7vw;
+    align-items:center;
+    font-family: 'DM Sans', serif;
+    
+}
+ .hidden {
+      opacity: 0;
+      filter: blur(2px);
+      transform: translateX(-50px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+    }
+
+    /* Optional: Add staggered delays for elements */
+    .hidden:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+    
+    .hidden:nth-child(3) {
+      transition-delay: 0.4s;
+    }
+    
+    .hidden:nth-child(4) {
+      transition-delay: 0.6s;
+    }
+
+    /* For elements coming from right side */
+    .hidden-right {
+      opacity: 0;
+      filter: blur(2px);
+      transform: translateX(50px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .show-right {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+    }
+    </style>
+    
+</head>
+<body>
+    <main>
+        <nav>
+            <a class="hero-nav-header">YourNextHire</a>
+            <button class="login-button">Login</button>
+            <button class="getstarted-button">Get Started Today</button>
+
+        </nav>
+        <div style='hero-section'>
+            <center>
+                <br/><br/>
+                <p class="info" >Enter your information</p>
+                <p class="lorem">Lorem ipsum dolor sit amet <br/> consectetur.
+                <br/>        <img class='squiggly' src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Vector%20144.png'/>
+         
+ </p>
+<img class='hero-img' src="https://github.com/ArnavVashisthCodingAccountnew/godsign/blob/main/Group%2035552.png?raw=true"/>       
+</center> </div>
+<div style="position:relative;">
+    <center>
+    <p class='lorem2 hidden'>Lorem ipsum dolor sit amet <br/> consectetur.</p>
+</center>
+<img style='width:170px;height:70px;position:relative;bottom:115px;left:709px;' src="https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Vector%2035.png"/>
+<center> <p class='info hidden' style='margin-top:-75px;margin-bottom:30px;'>Enter your information</p> </center>
+</div>
+<div class='features-1 hidden'>
+    <div class="card-1">
+        <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Businessman%20in%20a%20black%20suit%20and%20sunglasses.png'/>
+       <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+       <p>Lorem ipsum dolor sit amet consectetur. Ornare condimentum tellus ut elementum. Neque urna vitae vulputate velit augue tellus pretium volutpat non.</p>
+
+    </div>
+    <div class="card-2">
+        <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Businessman%20in%20a%20black%20suit%20and%20sunglasses.png'/>
+       <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+       <p>Lorem ipsum dolor sit amet consectetur. Ornare condimentum tellus ut elementum. Neque urna vitae vulputate velit augue tellus pretium volutpat non.</p>
+
+    </div>
+    <div class="card-3">
+        <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Businessman%20in%20a%20black%20suit%20and%20sunglasses.png'/>
+       <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+       <p>Lorem ipsum dolor sit amet consectetur. Ornare condimentum tellus ut elementum. Neque urna vitae vulputate velit augue tellus pretium volutpat non.</p>
+
+    </div>
+</div>
+<p class='lorem3 hidden'>Lorem ipsum dolor </p>
+<button class="btn-blue" style="
+margin-left:1160px;position:relative;bottom:50px;">
+<svg style='margin-left:10px;' id="prevBtn" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+	<path fill="white" d="M685.248 104.704a64 64 0 0 1 0 90.496L368.448 512l316.8 316.8a64 64 0 0 1-90.496 90.496L232.704 557.248a64 64 0 0 1 0-90.496l362.048-362.048a64 64 0 0 1 90.496 0" />
+</svg>
+</button><button  class="btn-blue" id="nextBtn" style="
+bottom:50px;position:relative;">
+
+<svg style='margin-left:10px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+	<path fill="white" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+</svg></button>
+
+<div class='divgod'>
+   <div class='withindivgod'>
+    <div class='bluecard'><p>Smth Smth</p></div>
+    <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/img2.png'/>
+   </div>
+   <div class='withindivgod'>
+    <div class='bluecard'><p>Smth Smth</p></div>
+    <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/img2.png'/>
+   </div>
+   <div class='withindivgod'>
+    <div class='bluecard'><p>Smth Smth</p></div>
+    <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/img2.png'/>
+   </div>
+   <div class='withindivgod'>
+    <div class='bluecard'><p>Smth Smth</p></div>
+    <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/img2.png'/>
+   </div>
+   <div class='withindivgod'>
+    <div class='bluecard'><p>Smth Smth</p></div>
+    <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/img2.png'/>
+   </div>
+   <div class='withindivgod' class='hidden'>
+    <div class='bluecard'><p>Smth Smth</p></div>
+    <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/img2.png'/>
+   </div>
+   
+    </div>
+    </div>
+    
+    </div>
+    
+    </div>
+    <div class='insane-features'>
+<h1 class="lorem4 hidden">Insane Features</h1></br></br><br/>
+<div class="divgod2">
+    <div class='withindivgod' style='margin-left:180px;margin-right:70px;'>
+        <img style="height:170px;width:170px;position:relative;bottom:80px;" src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Group%2035553.png'/>
+        <p style="font-family: 'DM Sans', serif;bottom:70px;position:relative;color:#FFFCF8;font-weight:600;line-height:109.2%;letter-spacing:-6%;">Lorem ipsum dolor sit <br/> amet consectetur.</p>
+
+    </div>
+    <div class='withindivgod'  class="hidden" style="margin-right:70px;">
+        <img style="height:170px;width:170px;position:relative;bottom:80px;" src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Group%2035553.png'/>
+        <p style="font-family: 'DM Sans', serif;bottom:70px;position:relative;color:#FFFCF8;font-weight:600;line-height:109.2%;letter-spacing:-6%;">Lorem ipsum dolor sit <br/> amet consectetur.</p>
+
+    </div>
+    <div class='withindivgod'  class="hidden">
+        <img style="height:170px;width:170px;position:relative;bottom:80px;" src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Group%2035553.png'/>
+        <p style="font-family: 'DM Sans', serif;bottom:70px;position:relative;color:#FFFCF8;font-weight:600;line-height:109.2%;letter-spacing:-6%;">Lorem ipsum dolor sit <br/> amet consectetur.</p>
+
+    </div>
+</div>
+
+
+    </div>
+  
+        
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 3"></button>
+    
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class='divgod2' style="
+        margin-top:80px;background-color:transparent !important;box-shadow:none;height:400px;">
+     <div class="withindivgod" style="overflow:hidden;    position: relative;
+     
+     width:40%;background-color:green;border-radius: 15px;box-shadow:10px 10px #1c294e;">
+     <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/WhatsApp%20Image%202024-10-11%20at%2015.33.50_ded8b748%20(1).png' style="width:100vw;height:100vh;object-fit:cover;
+     position: absolute;
+     "/>
+     </div>
+     <div class="withindivgod" style="width:57%;background-color:#1748EE;border-radius: 15px;box-shadow:10px 10px #1c294e;">
+     <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:700;color:#FFFCF8;font-size:26px;margin-top:80px;line-height: 109.2%;letter-spacing: -6%;">“Lorem ipsum dolor sit amet </br> consectetur. Ornare <br/> condimentum tellus ut <br/> elementum. Neque urna vitae <br/> vulputate velit augue tellus <br/> pretium volutpat non..”</p>
+     <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:500;color:#FFFCF8;font-size:19px;margin-top:50px;">Arnav Verma</p>
+     <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:bold;color:#FFFCF8;font-size:14px;opacity:0.4;margin-top:-5px;">CEO</p>
+     
+     </div>
+        </div>      </div>
+      <div class="carousel-item">
+        <div class='divgod2' style="
+        margin-top:80px;background-color:transparent !important;box-shadow:none;height:400px;">
+     <div class="withindivgod" style="overflow:hidden;    position: relative;
+     
+     width:40%;background-color:green;border-radius: 15px;box-shadow:10px 10px #1c294e;">
+     <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/WhatsApp%20Image%202024-10-11%20at%2015.33.50_ded8b748%20(1).png' style="width:100vw;height:100vh;object-fit:cover;
+     position: absolute;
+     "/>
+     </div>
+     <div class="withindivgod" style="width:57%;background-color:#1748EE;border-radius: 15px;box-shadow:10px 10px #1c294e;">
+     <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:700;color:#FFFCF8;font-size:26px;margin-top:80px;line-height: 109.2%;letter-spacing: -6%;">“Lorem ipsum dolor sit amet </br> consectetur. Ornare <br/> condimentum tellus ut <br/> elementum. Neque urna vitae <br/> vulputate velit augue tellus <br/> pretium volutpat non..”</p>
+     <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:500;color:#FFFCF8;font-size:19px;margin-top:50px;">Arnav Verma</p>
+     <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:bold;color:#FFFCF8;font-size:14px;opacity:0.4;margin-top:-5px;">CEO</p>
+     
+     </div>
+        </div>     </div>
+      <div class="carousel-item">
+        <div class='divgod2' style="
+        margin-top:80px;background-color:transparent !important;box-shadow:none;height:400px;">
+     <div class="withindivgod" style="overflow:hidden;    position: relative;
+     
+     width:40%;background-color:green;border-radius: 15px;box-shadow:10px 10px #1c294e;">
+     <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/WhatsApp%20Image%202024-10-11%20at%2015.33.50_ded8b748%20(1).png' style="width:100vw;height:100vh;object-fit:cover;
+     position: absolute;
+     "/>
+     </div>
+     <div class="withindivgod" style="width:57%;background-color:#1748EE;border-radius: 15px;box-shadow:10px 10px #1c294e;">
+     <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:700;color:#FFFCF8;font-size:26px;margin-top:80px;line-height: 109.2%;letter-spacing: -6%;">“Lorem ipsum dolor sit amet </br> consectetur. Ornare <br/> condimentum tellus ut <br/> elementum. Neque urna vitae <br/> vulputate velit augue tellus <br/> pretium volutpat non..”</p>
+     <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:500;color:#FFFCF8;font-size:19px;margin-top:50px;">Arnav Verma</p>
+     <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:bold;color:#FFFCF8;font-size:14px;opacity:0.4;margin-top:-5px;">CEO</p>
+     
+     </div>
+        </div>    </div>
+        <div class="carousel-item">
+            <div class='divgod2' style="
+            margin-top:80px;background-color:transparent !important;box-shadow:none;height:400px;">
+         <div class="withindivgod" style="overflow:hidden;    position: relative;
+         
+         width:40%;background-color:green;border-radius: 15px;box-shadow:10px 10px #1c294e;">
+         <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/WhatsApp%20Image%202024-10-11%20at%2015.33.50_ded8b748%20(1).png' style="width:100vw;height:100vh;object-fit:cover;
+         position: absolute;
+         "/>
+         </div>
+         <div class="withindivgod" style="width:57%;background-color:#1748EE;border-radius: 15px;box-shadow:10px 10px #1c294e;">
+         <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:700;color:#FFFCF8;font-size:26px;margin-top:80px;line-height: 109.2%;letter-spacing: -6%;">“Lorem ipsum dolor sit amet </br> consectetur. Ornare <br/> condimentum tellus ut <br/> elementum. Neque urna vitae <br/> vulputate velit augue tellus <br/> pretium volutpat non..”</p>
+         <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:500;color:#FFFCF8;font-size:19px;margin-top:50px;">Arnav Verma</p>
+         <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:bold;color:#FFFCF8;font-size:14px;opacity:0.4;margin-top:-5px;">CEO</p>
+         
+         </div>
+            </div>    </div>
+            <div class="carousel-item">
+                <div class='divgod2' style="
+                margin-top:80px;background-color:transparent !important;box-shadow:none;height:400px;">
+             <div class="withindivgod" style="overflow:hidden;    position: relative;
+             
+             width:40%;background-color:green;border-radius: 15px;box-shadow:10px 10px #1c294e;">
+             <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/WhatsApp%20Image%202024-10-11%20at%2015.33.50_ded8b748%20(1).png' style="width:100vw;height:100vh;object-fit:cover;
+             position: absolute;
+             "/>
+             </div>
+             <div class="withindivgod" style="width:57%;background-color:#1748EE;border-radius: 15px;box-shadow:10px 10px #1c294e;">
+             <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:700;color:#FFFCF8;font-size:26px;margin-top:80px;line-height: 109.2%;letter-spacing: -6%;">“Lorem ipsum dolor sit amet </br> consectetur. Ornare <br/> condimentum tellus ut <br/> elementum. Neque urna vitae <br/> vulputate velit augue tellus <br/> pretium volutpat non..”</p>
+             <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:500;color:#FFFCF8;font-size:19px;margin-top:50px;">Arnav Verma</p>
+             <p style="margin-left:40px;font-family: 'DM Sans', serif;font-weight:bold;color:#FFFCF8;font-size:14px;opacity:0.4;margin-top:-5px;">CEO</p>
+             
+             </div>
+                </div>    </div>
+    </div>
+    <button class="btn-blue" style='margin-left:1050px;' type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span aria-hidden="true"><svg style='margin-left:10px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+        <path fill="white" d="M685.248 104.704a64 64 0 0 1 0 90.496L368.448 512l316.8 316.8a64 64 0 0 1-90.496 90.496L232.704 557.248a64 64 0 0 1 0-90.496l362.048-362.048a64 64 0 0 1 90.496 0" />
+    </svg></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="btn-blue" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span  aria-hidden="true">
+        <svg style='margin-left:10px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+            <path fill="white" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+        </svg></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div style='margin:auto;
+  padding:0px;'>
+    <img style='height:600px;width:100%;margin-top:50px;' src='https://github.com/ArnavVashisthCodingAccountnew/godsign/blob/main/Group%2035554.png?raw=true'/>
+  </div>
+  <div class='faq-section'>
+    <p class='lorem3 hidden' style='text-align:center;algin-self:center;justify-content:center;margin-bottom:60px;'>Frequently Asked Questions</p>
+  <div class='card-wrapper'><div class='card'><p class='id'>Is YourNextHire free to use?</p>  <button 
+    class="faq-btn" style='margin-left:950px;margin-top:-4px;' type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span aria-hidden="true"> <svg style='margin-left:7px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+        <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+    </svg></span>
+  </button></div></div>
+  <div class='card-wrapper'><div class='card'><p class='id'>Can I customize my digital resume template?</p>  <button 
+    class="faq-btn" style='margin-left:950px;margin-top:-4px;' type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span aria-hidden="true"> <svg style='margin-left:7px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+        <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+    </svg></span>
+  </button></div></div>
+  <div class='card-wrapper'><div class='card'><p class='id'>Is YourNextHire suitable for all industries and job roles?</p>  <button 
+    class="faq-btn" style='margin-left:950px;margin-top:-4px;' type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span aria-hidden="true"> <svg style='margin-left:7px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+        <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+    </svg></span>
+  </button></div></div>
+  <div class='card-wrapper'><div class='card'><p class='id'>How can I share my digital resume with potential employers?</p>  <button 
+    class="faq-btn" style='margin-left:950px;margin-top:-4px;' type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span aria-hidden="true"> <svg style='margin-left:7px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+        <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+    </svg></span>
+  </button></div></div>
+  <div class='card-wrapper'><div class='card'><p class='id'>How does YourNextHire's AI-powered content creation work?</p>  <button 
+    class="faq-btn" style='margin-left:950px;margin-top:-4px;' type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span aria-hidden="true"> <svg style='margin-left:7px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+        <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+    </svg></span>
+  </button></div></div>
+</div>
+<section class='footer'>
+    <p style='position:relative;bottom:-25px;'>MADE WITH 🤍 by CORE</p>
+</section>
+    </main>
+    <script>
+const scroller = document.querySelector('.divgod');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const scrollAmount = 190; 
+
+prevBtn.addEventListener("click",()=> {
+   scroller.scrollBy({left:-scrollAmount,behavior:'smooth'})
+})
+nextBtn.addEventListener("click",()=> {
+   scroller.scrollBy({left:scrollAmount,behavior:'smooth'})
+})
+
+
+// Select all FAQ buttons
+document.querySelectorAll('.faq-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        // Get the parent card
+        const card = this.closest('.card');
+        
+        // Check if card is already expanded
+        const isExpanded = card.classList.contains('expanded');
+        
+        // First collapse any expanded cards
+        document.querySelectorAll('.card.expanded').forEach(expandedCard => {
+            expandedCard.style.height = '70px';
+            const header = expandedCard.querySelector(".id")
+
+            header.style.color = '#1748EE';
+            expandedCard.classList.remove('expanded');
+            // Reset the button icon
+            const btn = expandedCard.querySelector('.faq-btn');
+            btn.innerHTML = `
+                <span aria-hidden="true">
+                    <svg style="margin-left:7px;" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+                        <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+                    </svg>
+                </span>`;
+                
+        });
+
+        if (!isExpanded) {
+            // Expand this card
+            card.style.height = '150px'; // Adjust height as needed
+            card.classList.add('expanded');
+            
+            // Add the answer text
+            if (!card.querySelector('.answer')) {
+                const answer = document.createElement('p');
+                answer.className = 'answer';
+                answer.style.cssText = `
+                    margin-left: 30px;
+                    margin-top: 20px;
+                    color: #FFFCF8;
+                    font-weight: 400;
+                    font-family: 'DM Sans', serif;
+                    opacity: 0.7;
+
+                `;
+                answer.textContent = "Yes, YourNextHire offers free AI-powered resume optimization and personalized assistance to help you create a compelling  resume that stands out to employers.";
+                card.appendChild(answer);
+              
+                answer.style.wordWrap = "break-word";
+                answer.style.width = "700px";
+                
+            }
+            
+            // Change button icon to collapse
+            this.innerHTML = `
+                <span aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:-1px;" width="2.5em" height="2.5em" viewBox="0 0 24 24">
+	<path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 14l-5-5l-5 5" />
+</svg>
+                </span>`;
+                const header = card.querySelector(".id")
+                header.style.color = '#FFFCF8';
+               
+
+    
+
+        }
+    });
+});   
+        </script>
+      <script defer>
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (entry.target.classList.contains('hidden-right')) {
+                entry.target.classList.add('show-right');
+              } else {
+                entry.target.classList.add('show');
+              }
+            } else {
+              // Remove the show classes when the element exits the viewport
+              entry.target.classList.remove('show', 'show-right');
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px"
+        });
+      
+        document.querySelectorAll('.hidden, .hidden-right').forEach((el) => {
+          observer.observe(el);
+        });
+      </script>
+      
+</body>
+</html>
