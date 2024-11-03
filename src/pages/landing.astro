@@ -42,6 +42,7 @@ const props = Astro.props
         }
         .login-button{
             margin-left:700px;
+            background-color:#1748EE !important;
             font-family: "DM Sans", serif;
             font-optical-sizing: auto;
             color:#FFFCF8;
@@ -51,8 +52,9 @@ const props = Astro.props
             padding-bottom:5px;
             padding-right:14px;
             padding-left:14px;
-            font-size:15px;
+            font-size:13px;
             font-weight:700;
+          height:60%;
         }
         .getstarted-button{
             margin-left:10px;
@@ -366,6 +368,7 @@ text-align: center;
     cursor: pointer; /* Pointer cursor on hover */
     box-shadow: 3px 1px; /* Drop shadow */
     margin-right:10px;
+  
 }
 .faq-btn {
     background-color:transparent; /* Button background color */
@@ -482,6 +485,10 @@ text-align: center;
     font-family: 'DM Sans', serif;
     
 }
+  a {
+    text-decoration:none;
+      
+    }
  .hidden {
       opacity: 0;
       filter: blur(2px);
@@ -521,6 +528,31 @@ text-align: center;
       filter: blur(0);
       transform: translateX(0);
     }
+    .hidden-bottom {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateY(50px); /* Start 50px below */
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.show-bottom {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0); /* Move to original position */
+}
+
+    .hidden-bottom:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.hidden-bottom:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.hidden-bottom:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
     </style>
     
 </head>
@@ -549,7 +581,7 @@ text-align: center;
 <img style='width:170px;height:70px;position:relative;bottom:115px;left:709px;' src="https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Vector%2035.png"/>
 <center> <p class='info hidden' style='margin-top:-75px;margin-bottom:30px;'>Enter your information</p> </center>
 </div>
-<div class='features-1 hidden'>
+<div class='features-1 hidden-bottom'>
     <div class="card-1">
         <img src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Businessman%20in%20a%20black%20suit%20and%20sunglasses.png'/>
        <h1>Lorem ipsum dolor sit amet consectetur.</h1>
@@ -572,13 +604,13 @@ text-align: center;
 <p class='lorem3 hidden'>Lorem ipsum dolor </p>
 <button class="btn-blue" style="
 margin-left:1160px;position:relative;bottom:50px;">
-<svg style='' id="prevBtn" xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 1024 1024">
+<svg style='' id="prevBtn" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
 	<path fill="white" d="M685.248 104.704a64 64 0 0 1 0 90.496L368.448 512l316.8 316.8a64 64 0 0 1-90.496 90.496L232.704 557.248a64 64 0 0 1 0-90.496l362.048-362.048a64 64 0 0 1 90.496 0" />
 </svg>
 </button><button  class="btn-blue" id="nextBtn" style="
 bottom:50px;position:relative;">
 
-<svg style='margin-left:10px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+<svg style='margin-left:2px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
 	<path fill="white" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
 </svg></button>
 
@@ -616,18 +648,18 @@ bottom:50px;position:relative;">
     </div>
     <div class='insane-features'>
 <h1 class="lorem4 hidden">Insane Features</h1></br></br><br/>
-<div class="divgod2">
-    <div class='withindivgod' style='margin-left:180px;margin-right:70px;'>
+<div class="divgod2 hidden">
+    <div class='withindivgod hidden' style='margin-left:180px;margin-right:70px;'>
         <img style="height:170px;width:170px;position:relative;bottom:80px;" src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Group%2035553.png'/>
         <p style="font-family: 'DM Sans', serif;bottom:70px;position:relative;color:#FFFCF8;font-weight:600;line-height:109.2%;letter-spacing:-6%;">Lorem ipsum dolor sit <br/> amet consectetur.</p>
 
     </div>
-    <div class='withindivgod'  class="hidden" style="margin-right:70px;">
+    <div class='withindivgod hidden'  class="hidden" style="margin-right:70px;">
         <img style="height:170px;width:170px;position:relative;bottom:80px;" src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Group%2035553.png'/>
         <p style="font-family: 'DM Sans', serif;bottom:70px;position:relative;color:#FFFCF8;font-weight:600;line-height:109.2%;letter-spacing:-6%;">Lorem ipsum dolor sit <br/> amet consectetur.</p>
 
     </div>
-    <div class='withindivgod'  class="hidden">
+    <div class='withindivgod hidden'  class="hidden">
         <img style="height:170px;width:170px;position:relative;bottom:80px;" src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Group%2035553.png'/>
         <p style="font-family: 'DM Sans', serif;bottom:70px;position:relative;color:#FFFCF8;font-weight:600;line-height:109.2%;letter-spacing:-6%;">Lorem ipsum dolor sit <br/> amet consectetur.</p>
 
@@ -746,7 +778,7 @@ bottom:50px;position:relative;">
 
 <button class="btn-blue" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
     <span aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
             <path fill="white" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
         </svg>
     </span>
@@ -761,31 +793,31 @@ bottom:50px;position:relative;">
     <p class='lorem3 hidden' style='text-align:center;algin-self:center;justify-content:center;margin-bottom:60px;'>Frequently Asked Questions</p>
   <div class='card-wrapper'><div class='card'><p class='id'>Is YourNextHire free to use?</p>  <button 
     class="faq-btn" style='margin-left:950px;margin-top:-4px;' type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span aria-hidden="true"> <svg style='margin-left:7px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+    <span aria-hidden="true"> <svg style='margin-left:2px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
         <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
     </svg></span>
   </button></div></div>
   <div class='card-wrapper'><div class='card'><p class='id'>Can I customize my digital resume template?</p>  <button 
     class="faq-btn" style='margin-left:950px;margin-top:-4px;' type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span aria-hidden="true"> <svg style='margin-left:7px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+    <span aria-hidden="true"> <svg style='margin-left:2px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
         <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
     </svg></span>
   </button></div></div>
   <div class='card-wrapper'><div class='card'><p class='id'>Is YourNextHire suitable for all industries and job roles?</p>  <button 
     class="faq-btn" style='margin-left:950px;margin-top:-4px;' type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span aria-hidden="true"> <svg style='margin-left:7px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+    <span aria-hidden="true"> <svg style='margin-left:2px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
         <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
     </svg></span>
   </button></div></div>
   <div class='card-wrapper'><div class='card'><p class='id'>How can I share my digital resume with potential employers?</p>  <button 
     class="faq-btn" style='margin-left:950px;margin-top:-4px;' type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span aria-hidden="true"> <svg style='margin-left:7px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+    <span aria-hidden="true"> <svg style='margin-left:2px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
         <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
     </svg></span>
   </button></div></div>
   <div class='card-wrapper'><div class='card'><p class='id'>How does YourNextHire's AI-powered content creation work?</p>  <button 
     class="faq-btn" style='margin-left:950px;margin-top:-4px;' type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span aria-hidden="true"> <svg style='margin-left:7px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+    <span aria-hidden="true"> <svg style='margin-left:2px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
         <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
     </svg></span>
   </button></div></div>
@@ -794,53 +826,48 @@ bottom:50px;position:relative;">
     <p style='position:relative;bottom:-25px;'>MADE WITH 🤍 by CORE</p>
 </section>
     </main>
-    <script>
-const scroller = document.querySelector('.divgod');
+<script>
+   const scroller = document.querySelector('.divgod');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
-const scrollAmount = 190; 
+const scrollAmount = 190;
 
-prevBtn.addEventListener("click",()=> {
-   scroller.scrollBy({left:-scrollAmount,behavior:'smooth'})
-})
-nextBtn.addEventListener("click",()=> {
-   scroller.scrollBy({left:scrollAmount,behavior:'smooth'})
-})
+prevBtn.addEventListener("click", () => {
+    scroller.scrollBy({left: -scrollAmount, behavior: 'smooth'})
+});
 
+nextBtn.addEventListener("click", () => {
+    scroller.scrollBy({left: scrollAmount, behavior: 'smooth'})
+});
 
 // Select all FAQ buttons
 document.querySelectorAll('.faq-btn').forEach(button => {
     button.addEventListener('click', function() {
-        // Get the parent card
         const card = this.closest('.card');
-        
-        // Check if card is already expanded
         const isExpanded = card.classList.contains('expanded');
         
         // First collapse any expanded cards
         document.querySelectorAll('.card.expanded').forEach(expandedCard => {
             expandedCard.style.height = '70px';
-            const header = expandedCard.querySelector(".id")
-
+            const header = expandedCard.querySelector(".id");
             header.style.color = '#1748EE';
             expandedCard.classList.remove('expanded');
-            // Reset the button icon
+            // Reset the button icon with consistent sizing
             const btn = expandedCard.querySelector('.faq-btn');
             btn.innerHTML = `
                 <span aria-hidden="true">
-                    <svg style="margin-left:7px;" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 1024 1024">
+                    <svg style="margin-left:2px; width: 24px; height: 24px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
                         <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
                     </svg>
                 </span>`;
-                
         });
 
         if (!isExpanded) {
             // Expand this card
-            card.style.height = '150px'; // Adjust height as needed
+            card.style.height = '150px';
             card.classList.add('expanded');
             
-            // Add the answer text
+            // Add the answer text if it doesn't exist
             if (!card.querySelector('.answer')) {
                 const answer = document.createElement('p');
                 answer.className = 'answer';
@@ -851,55 +878,102 @@ document.querySelectorAll('.faq-btn').forEach(button => {
                     font-weight: 400;
                     font-family: 'DM Sans', serif;
                     opacity: 0.7;
-
+                    word-wrap: break-word;
+                    width: 700px;
                 `;
-                answer.textContent = "Yes, YourNextHire offers free AI-powered resume optimization and personalized assistance to help you create a compelling  resume that stands out to employers.";
+                answer.textContent = "Yes, YourNextHire offers free AI-powered resume optimization and personalized assistance to help you create a compelling resume that stands out to employers.";
                 card.appendChild(answer);
-              
-                answer.style.wordWrap = "break-word";
-                answer.style.width = "700px";
-                
             }
             
-            // Change button icon to collapse
+            // Change button icon to collapse with consistent sizing
             this.innerHTML = `
                 <span aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:-1px;" width="2.5em" height="2.5em" viewBox="0 0 24 24">
-	<path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 14l-5-5l-5 5" />
-</svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:2px; width: 24px; height: 24px;" viewBox="0 0 24 24">
+                        <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 14l-5-5l-5 5" />
+                    </svg>
                 </span>`;
-                const header = card.querySelector(".id")
-                header.style.color = '#FFFCF8';
-               
-
-    
-
+            const header = card.querySelector(".id");
+            header.style.color = '#FFFCF8';
         }
     });
-});   
-        </script>
+});
+</script>
       <script defer>
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              if (entry.target.classList.contains('hidden-right')) {
-                entry.target.classList.add('show-right');
-              } else {
-                entry.target.classList.add('show');
-              }
-            } else {
-              // Remove the show classes when the element exits the viewport
-              entry.target.classList.remove('show', 'show-right');
-            }
-          });
-        }, {
-          threshold: 0.1,
-          rootMargin: "0px 0px -50px 0px"
+// Create an observer instance
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    // Check if element is in view
+    if (entry.isIntersecting) {
+      // Add appropriate show class based on the hidden class present
+      if (entry.target.classList.contains('hidden')) {
+        entry.target.classList.add('show');
+      } else if (entry.target.classList.contains('hidden-right')) {
+        entry.target.classList.add('show-right');
+      } else if (entry.target.classList.contains('hidden-bottom')) {
+        entry.target.classList.add('show-bottom');
+      }
+    } else {
+      // Remove show classes when element is out of view
+      // This ensures animation works every time element comes into view
+      if (entry.target.classList.contains('hidden')) {
+        entry.target.classList.remove('show');
+      } else if (entry.target.classList.contains('hidden-right')) {
+        entry.target.classList.remove('show-right');
+      } else if (entry.target.classList.contains('hidden-bottom')) {
+        entry.target.classList.remove('show-bottom');
+      }
+    }
+  });
+}, {
+  // Options for the observer
+  threshold: 0.1, // Trigger when at least 10% of the element is visible
+  rootMargin: '50px' // Adds margin around the viewport
+});
+
+// Function to initialize observers on elements
+function initializeScrollAnimations() {
+  // Get all elements with animation classes
+  const hiddenElements = document.querySelectorAll('.hidden, .hidden-right, .hidden-bottom');
+  
+  // Observe each element
+  hiddenElements.forEach(element => {
+    observer.observe(element);
+  });
+}
+
+// Initialize on DOM content loaded
+document.addEventListener('DOMContentLoaded', initializeScrollAnimations);
+
+// Optional: Handle dynamically added elements
+const mutationObserver = new MutationObserver((mutations) => {
+  mutations.forEach(mutation => {
+    mutation.addedNodes.forEach(node => {
+      // Check if added node is an element
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        // Check if element or its descendants have animation classes
+        const newElements = node.querySelectorAll('.hidden, .hidden-right, .hidden-bottom');
+        if (node.matches('.hidden, .hidden-right, .hidden-bottom')) {
+          observer.observe(node);
+        }
+        newElements.forEach(element => {
+          observer.observe(element);
         });
-      
-        document.querySelectorAll('.hidden, .hidden-right').forEach((el) => {
-          observer.observe(el);
-        });
+      }
+    });
+  });
+});
+
+// Start observing the document for added nodes
+mutationObserver.observe(document.body, {
+  childList: true,
+  subtree: true
+});
+
+// Clean up function (optional - use when removing the functionality)
+function cleanupScrollAnimations() {
+  observer.disconnect();
+  mutationObserver.disconnect();
+}
       </script>
       
 </body>
