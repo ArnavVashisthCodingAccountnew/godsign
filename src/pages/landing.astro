@@ -38,7 +38,7 @@ const props = Astro.props
             font-size: 20px;
             margin-top:0;
             margin-left:40px;
-            display: block; /* Ensure the element behaves like a block element to respect margin */
+            display: block; 
         }
         .login-button{
             margin-left:700px;
@@ -46,7 +46,7 @@ const props = Astro.props
             font-family: "DM Sans", serif;
             font-optical-sizing: auto;
             color:#FFFCF8;
-            border: 1px solid #FFFCF8; /* Set border width, style, and color */
+            border: 1px solid #FFFCF8;
             border-radius:10px;
             padding-top:6px;
             padding-bottom:5px;
@@ -61,7 +61,7 @@ const props = Astro.props
             font-family: "DM Sans", serif;
             font-optical-sizing: auto;
             color:#1748EE;
-            border: 1px solid #FFFCF8; /* Set border width, style, and color */
+            border: 1px solid #FFFCF8;
             border-radius:10px;
             padding-top:6px;
             padding-bottom:5px;
@@ -97,7 +97,7 @@ const props = Astro.props
             word-wrap:break-word;
             letter-spacing:-6%;
             line-height:40.10px;
-            font-size: 36.11px;
+font-size: 36.11px;
             margin-bottom:-90px;
             margin-top:10px;
 
@@ -145,6 +145,8 @@ const props = Astro.props
             letter-spacing:-6%;
             line-height:40.10px;
             font-size: 36.11px;
+
+
             margin-bottom:-90px;
             margin-top:40px;
             align-self:center;
@@ -358,27 +360,27 @@ text-align: center;
 }
 
 .btn-blue {
-    background-color:#1748EE; /* Button background color */
-    width: 40px; /* Adjusted width for a better button size */
-    height: 40px; /* Adjusted height for a better button size */
-    border-radius: 20px; /* Rounded corners */
-    font-size: 15px; /* Font size */
-    font-weight: bold; /* Bold text */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 3px 1px; /* Drop shadow */
+    background-color:#1748EE;
+    width: 40px; 
+    height: 40px;
+    border-radius: 20px; 
+    font-size: 15px; 
+    font-weight: bold; 
+    border: none;
+    cursor: pointer; 
+    box-shadow: 3px 1px; 
     margin-right:10px;
   
 }
 .faq-btn {
-    background-color:transparent; /* Button background color */
-    width: 40px; /* Adjusted width for a better button size */
-    height: 40px; /* Adjusted height for a better button size */
-    border-radius: 20px; /* Rounded corners */
-    font-size: 15px; /* Font size */
-    font-weight: bold; /* Bold text */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer cursor on hover */
+    background-color:transparent;
+    width: 40px;
+    height: 40px; 
+    border-radius: 20px; 
+    font-size: 15px; 
+    font-weight: bold; 
+    border: none;
+    cursor: pointer; 
     margin-right:10px;
     border-style:solid;
     border-color:#1748EE;
@@ -400,15 +402,15 @@ text-align: center;
     width: 10px !important;
     height: 10px !important;
     border-radius: 50% !important;
-    border: 2px solid #1748EE !important;  /* Combined border properties */
-    background-color: transparent !important;  /* Changed to transparent to see border */
+    border: 2px solid #1748EE !important;  
+    background-color: transparent !important;  
     margin: 0 5px !important;
     padding: 0 !important;
     opacity: 0.5;
 }
 
 .carousel-indicators button.active {
-    background-color: #1748EE !important;  /* Fill with color when active */
+    background-color: #1748EE !important;  
     opacity: 1;
 }
 .faq-section {
@@ -538,7 +540,7 @@ text-align: center;
 .show-bottom {
   opacity: 1;
   filter: blur(0);
-  transform: translateY(0); /* Move to original position */
+  transform: translateY(0); 
 }
 
     .hidden-bottom:nth-child(2) {
@@ -827,10 +829,10 @@ bottom:50px;position:relative;">
 </section>
     </main>
 <script>
-   const scroller = document.querySelector('.divgod');
+const scroller = document.querySelector('.divgod');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
-const scrollAmount = 190;
+const scrollAmount = 190; 
 
 prevBtn.addEventListener("click", () => {
     scroller.scrollBy({left: -scrollAmount, behavior: 'smooth'})
@@ -840,19 +842,19 @@ nextBtn.addEventListener("click", () => {
     scroller.scrollBy({left: scrollAmount, behavior: 'smooth'})
 });
 
-// Select all FAQ buttons
+// faq buttons selected here
 document.querySelectorAll('.faq-btn').forEach(button => {
     button.addEventListener('click', function() {
         const card = this.closest('.card');
         const isExpanded = card.classList.contains('expanded');
         
-        // First collapse any expanded cards
+        // collapse all expanded cards present (if any)
         document.querySelectorAll('.card.expanded').forEach(expandedCard => {
             expandedCard.style.height = '70px';
             const header = expandedCard.querySelector(".id");
             header.style.color = '#1748EE';
             expandedCard.classList.remove('expanded');
-            // Reset the button icon with consistent sizing
+            // button icon reset
             const btn = expandedCard.querySelector('.faq-btn');
             btn.innerHTML = `
                 <span aria-hidden="true">
@@ -863,7 +865,6 @@ document.querySelectorAll('.faq-btn').forEach(button => {
         });
 
         if (!isExpanded) {
-            // Expand this card
             card.style.height = '150px';
             card.classList.add('expanded');
             
@@ -873,10 +874,10 @@ document.querySelectorAll('.faq-btn').forEach(button => {
                 answer.className = 'answer';
                 answer.style.cssText = `
                     margin-left: 30px;
-                    margin-top: 20px;
+                margin-top: 20px;
                     color: #FFFCF8;
                     font-weight: 400;
-                    font-family: 'DM Sans', serif;
+                    font-family:'DM Sans', serif;
                     opacity: 0.7;
                     word-wrap: break-word;
                     width: 700px;
@@ -885,7 +886,7 @@ document.querySelectorAll('.faq-btn').forEach(button => {
                 card.appendChild(answer);
             }
             
-            // Change button icon to collapse with consistent sizing
+            // change button icon to collapse
             this.innerHTML = `
                 <span aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:2px; width: 24px; height: 24px;" viewBox="0 0 24 24">
@@ -899,12 +900,11 @@ document.querySelectorAll('.faq-btn').forEach(button => {
 });
 </script>
       <script defer>
-// Create an observer instance
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     // Check if element is in view
     if (entry.isIntersecting) {
-      // Add appropriate show class based on the hidden class present
+      // adding show class
       if (entry.target.classList.contains('hidden')) {
         entry.target.classList.add('show');
       } else if (entry.target.classList.contains('hidden-right')) {
@@ -913,8 +913,7 @@ const observer = new IntersectionObserver((entries) => {
         entry.target.classList.add('show-bottom');
       }
     } else {
-      // Remove show classes when element is out of view
-      // This ensures animation works every time element comes into view
+      // classes removal when element is out of view of user
       if (entry.target.classList.contains('hidden')) {
         entry.target.classList.remove('show');
       } else if (entry.target.classList.contains('hidden-right')) {
@@ -925,32 +924,32 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  // Options for the observer
-  threshold: 0.1, // Trigger when at least 10% of the element is visible
-  rootMargin: '50px' // Adds margin around the viewport
+  // settings for observer
+  threshold: 0.1, // starts when at least 10% of the element is seen
+  rootMargin: '50px' //margin in viewport
 });
 
-// Function to initialize observers on elements
-function initializeScrollAnimations() {
-  // Get all elements with animation classes
+// init observer on elements
+function scrollyrun() {
+  // select all elements with classes to animate with scrolly animations
   const hiddenElements = document.querySelectorAll('.hidden, .hidden-right, .hidden-bottom');
   
-  // Observe each element
+  // each element observed here
   hiddenElements.forEach(element => {
     observer.observe(element);
   });
 }
 
-// Initialize on DOM content loaded
+// init as dom content loads
 document.addEventListener('DOMContentLoaded', initializeScrollAnimations);
 
-// Optional: Handle dynamically added elements
-const mutationObserver = new MutationObserver((mutations) => {
+// dynamic element handling
+const mutationObserverofScrolly = new mutationObserverofScrolly((mutations) => {
   mutations.forEach(mutation => {
     mutation.addedNodes.forEach(node => {
-      // Check if added node is an element
+      // checking if node added an element
       if (node.nodeType === Node.ELEMENT_NODE) {
-        // Check if element or its descendants have animation classes
+        // check if element or its descendants have the classes
         const newElements = node.querySelectorAll('.hidden, .hidden-right, .hidden-bottom');
         if (node.matches('.hidden, .hidden-right, .hidden-bottom')) {
           observer.observe(node);
@@ -963,16 +962,16 @@ const mutationObserver = new MutationObserver((mutations) => {
   });
 });
 
-// Start observing the document for added nodes
-mutationObserver.observe(document.body, {
+// any new nodes in doc , check
+mutationObserverofScrolly.observe(document.body, {
   childList: true,
   subtree: true
 });
 
-// Clean up function (optional - use when removing the functionality)
-function cleanupScrollAnimations() {
+// clean up scrolly
+function cleanscrolly(){
   observer.disconnect();
-  mutationObserver.disconnect();
+  mutationObserverofScrolly.disconnect();
 }
       </script>
       
