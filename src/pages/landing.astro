@@ -38,7 +38,7 @@ const props = Astro.props
             font-size: 20px;
             margin-top:0;
             margin-left:40px;
-            display: block; 
+            display: block; /* Ensure the element behaves like a block element to respect margin */
         }
         .login-button{
             margin-left:700px;
@@ -46,7 +46,7 @@ const props = Astro.props
             font-family: "DM Sans", serif;
             font-optical-sizing: auto;
             color:#FFFCF8;
-            border: 1px solid #FFFCF8;
+            border: 1px solid #FFFCF8; /* Set border width, style, and color */
             border-radius:10px;
             padding-top:6px;
             padding-bottom:5px;
@@ -61,7 +61,7 @@ const props = Astro.props
             font-family: "DM Sans", serif;
             font-optical-sizing: auto;
             color:#1748EE;
-            border: 1px solid #FFFCF8;
+            border: 1px solid #FFFCF8; /* Set border width, style, and color */
             border-radius:10px;
             padding-top:6px;
             padding-bottom:5px;
@@ -97,7 +97,7 @@ const props = Astro.props
             word-wrap:break-word;
             letter-spacing:-6%;
             line-height:40.10px;
-font-size: 36.11px;
+            font-size: 36.11px;
             margin-bottom:-90px;
             margin-top:10px;
 
@@ -145,8 +145,6 @@ font-size: 36.11px;
             letter-spacing:-6%;
             line-height:40.10px;
             font-size: 36.11px;
-
-
             margin-bottom:-90px;
             margin-top:40px;
             align-self:center;
@@ -360,27 +358,27 @@ text-align: center;
 }
 
 .btn-blue {
-    background-color:#1748EE;
-    width: 40px; 
-    height: 40px;
-    border-radius: 20px; 
-    font-size: 15px; 
-    font-weight: bold; 
-    border: none;
-    cursor: pointer; 
-    box-shadow: 3px 1px; 
+    background-color:#1748EE; /* Button background color */
+    width: 40px; /* Adjusted width for a better button size */
+    height: 40px; /* Adjusted height for a better button size */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 15px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 3px 1px; /* Drop shadow */
     margin-right:10px;
   
 }
 .faq-btn {
-    background-color:transparent;
-    width: 40px;
-    height: 40px; 
-    border-radius: 20px; 
-    font-size: 15px; 
-    font-weight: bold; 
-    border: none;
-    cursor: pointer; 
+    background-color:transparent; /* Button background color */
+    width: 40px; /* Adjusted width for a better button size */
+    height: 40px; /* Adjusted height for a better button size */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 15px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
     margin-right:10px;
     border-style:solid;
     border-color:#1748EE;
@@ -402,15 +400,15 @@ text-align: center;
     width: 10px !important;
     height: 10px !important;
     border-radius: 50% !important;
-    border: 2px solid #1748EE !important;  
-    background-color: transparent !important;  
+    border: 2px solid #1748EE !important;  /* Combined border properties */
+    background-color: transparent !important;  /* Changed to transparent to see border */
     margin: 0 5px !important;
     padding: 0 !important;
     opacity: 0.5;
 }
 
 .carousel-indicators button.active {
-    background-color: #1748EE !important;  
+    background-color: #1748EE !important;  /* Fill with color when active */
     opacity: 1;
 }
 .faq-section {
@@ -540,7 +538,7 @@ text-align: center;
 .show-bottom {
   opacity: 1;
   filter: blur(0);
-  transform: translateY(0); 
+  transform: translateY(0); /* Move to original position */
 }
 
     .hidden-bottom:nth-child(2) {
@@ -829,10 +827,10 @@ bottom:50px;position:relative;">
 </section>
     </main>
 <script>
-const scroller = document.querySelector('.divgod');
+   const scroller = document.querySelector('.divgod');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
-const scrollAmount = 190; 
+const scrollAmount = 190;
 
 prevBtn.addEventListener("click", () => {
     scroller.scrollBy({left: -scrollAmount, behavior: 'smooth'})
@@ -842,29 +840,30 @@ nextBtn.addEventListener("click", () => {
     scroller.scrollBy({left: scrollAmount, behavior: 'smooth'})
 });
 
-// faq buttons selected here
+// Select all FAQ buttons
 document.querySelectorAll('.faq-btn').forEach(button => {
     button.addEventListener('click', function() {
         const card = this.closest('.card');
         const isExpanded = card.classList.contains('expanded');
         
-        // collapse all expanded cards present (if any)
+        // First collapse any expanded cards
         document.querySelectorAll('.card.expanded').forEach(expandedCard => {
             expandedCard.style.height = '70px';
             const header = expandedCard.querySelector(".id");
             header.style.color = '#1748EE';
             expandedCard.classList.remove('expanded');
-            // button icon reset
+            // Reset the button icon with consistent sizing
             const btn = expandedCard.querySelector('.faq-btn');
             btn.innerHTML = `
                 <span aria-hidden="true">
-                    <svg style="margin-left:2px; width: 24px; height: 24px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-                        <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
-                    </svg>
+                 <svg style="margin-left:2px;" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
+        <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0"></path>
+    </svg>
                 </span>`;
         });
 
         if (!isExpanded) {
+            // Expand this card
             card.style.height = '150px';
             card.classList.add('expanded');
             
@@ -874,10 +873,10 @@ document.querySelectorAll('.faq-btn').forEach(button => {
                 answer.className = 'answer';
                 answer.style.cssText = `
                     margin-left: 30px;
-                margin-top: 20px;
+                    margin-top: 20px;
                     color: #FFFCF8;
                     font-weight: 400;
-                    font-family:'DM Sans', serif;
+                    font-family: 'DM Sans', serif;
                     opacity: 0.7;
                     word-wrap: break-word;
                     width: 700px;
@@ -886,12 +885,12 @@ document.querySelectorAll('.faq-btn').forEach(button => {
                 card.appendChild(answer);
             }
             
-            // change button icon to collapse
+            // Change button icon to collapse with consistent sizing
             this.innerHTML = `
                 <span aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:2px; width: 24px; height: 24px;" viewBox="0 0 24 24">
-                        <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 14l-5-5l-5 5" />
-                    </svg>
+                    <svg style="margin-left:2px;" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
+        <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0"></path>
+    </svg>
                 </span>`;
             const header = card.querySelector(".id");
             header.style.color = '#FFFCF8';
@@ -900,11 +899,12 @@ document.querySelectorAll('.faq-btn').forEach(button => {
 });
 </script>
       <script defer>
+// Create an observer instance
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     // Check if element is in view
     if (entry.isIntersecting) {
-      // adding show class
+      // Add appropriate show class based on the hidden class present
       if (entry.target.classList.contains('hidden')) {
         entry.target.classList.add('show');
       } else if (entry.target.classList.contains('hidden-right')) {
@@ -913,7 +913,8 @@ const observer = new IntersectionObserver((entries) => {
         entry.target.classList.add('show-bottom');
       }
     } else {
-      // classes removal when element is out of view of user
+      // Remove show classes when element is out of view
+      // This ensures animation works every time element comes into view
       if (entry.target.classList.contains('hidden')) {
         entry.target.classList.remove('show');
       } else if (entry.target.classList.contains('hidden-right')) {
@@ -924,32 +925,32 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  // settings for observer
-  threshold: 0.1, // starts when at least 10% of the element is seen
-  rootMargin: '50px' //margin in viewport
+  // Options for the observer
+  threshold: 0.1, // Trigger when at least 10% of the element is visible
+  rootMargin: '50px' // Adds margin around the viewport
 });
 
-// init observer on elements
-function scrollyrun() {
-  // select all elements with classes to animate with scrolly animations
+// Function to initialize observers on elements
+function initializeScrollAnimations() {
+  // Get all elements with animation classes
   const hiddenElements = document.querySelectorAll('.hidden, .hidden-right, .hidden-bottom');
   
-  // each element observed here
+  // Observe each element
   hiddenElements.forEach(element => {
     observer.observe(element);
   });
 }
 
-// init as dom content loads
+// Initialize on DOM content loaded
 document.addEventListener('DOMContentLoaded', initializeScrollAnimations);
 
-// dynamic element handling
-const mutationObserverofScrolly = new mutationObserverofScrolly((mutations) => {
+// Optional: Handle dynamically added elements
+const mutationObserver = new MutationObserver((mutations) => {
   mutations.forEach(mutation => {
     mutation.addedNodes.forEach(node => {
-      // checking if node added an element
+      // Check if added node is an element
       if (node.nodeType === Node.ELEMENT_NODE) {
-        // check if element or its descendants have the classes
+        // Check if element or its descendants have animation classes
         const newElements = node.querySelectorAll('.hidden, .hidden-right, .hidden-bottom');
         if (node.matches('.hidden, .hidden-right, .hidden-bottom')) {
           observer.observe(node);
@@ -962,16 +963,16 @@ const mutationObserverofScrolly = new mutationObserverofScrolly((mutations) => {
   });
 });
 
-// any new nodes in doc , check
-mutationObserverofScrolly.observe(document.body, {
+// Start observing the document for added nodes
+mutationObserver.observe(document.body, {
   childList: true,
   subtree: true
 });
 
-// clean up scrolly
-function cleanscrolly(){
+// Clean up function (optional - use when removing the functionality)
+function cleanupScrollAnimations() {
   observer.disconnect();
-  mutationObserverofScrolly.disconnect();
+  mutationObserver.disconnect();
 }
       </script>
       
