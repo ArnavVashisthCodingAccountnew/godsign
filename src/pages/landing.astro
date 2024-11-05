@@ -855,11 +855,10 @@ document.querySelectorAll('.faq-btn').forEach(button => {
             // Reset the button icon with consistent sizing
             const btn = expandedCard.querySelector('.faq-btn');
             btn.innerHTML = `
-                <span aria-hidden="true">
-                 <svg style="margin-left:2px;" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
-        <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0"></path>
-    </svg>
-                </span>`;
+               
+  <span aria-hidden="true"> <svg style='margin-left:2px;' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
+        <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+    </svg></span>`;
         });
 
         if (!isExpanded) {
@@ -888,8 +887,8 @@ document.querySelectorAll('.faq-btn').forEach(button => {
             // Change button icon to collapse with consistent sizing
             this.innerHTML = `
                 <span aria-hidden="true">
-                    <svg style="margin-left:2px;" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
-        <path fill="#1748EE" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0"></path>
+                    <svg style="margin-left:0px;transform: rotate(270deg);margin-bottom:1px;" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 1024 1024">
+        <path fill="white" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0"></path>
     </svg>
                 </span>`;
             const header = card.querySelector(".id");
