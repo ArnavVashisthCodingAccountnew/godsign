@@ -16,6 +16,205 @@ const props = Astro.props
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <style>
+    
+    /* Mobile Styles */
+    @media (max-width: 767px) {
+        nav {
+            height: 50px;
+        }
+
+        .hero-nav-header {
+            font-size: 16px;
+            margin-left: 20px;
+        }
+
+        .login-button,
+        .getstarted-button {
+            font-size: 12px;
+            padding: 4px 8px;
+            margin-left: 10px;
+        }
+
+        .hero-img {
+            height: auto;
+            max-width: 100%;
+        }
+
+        .lorem,
+        .lorem2,
+        .lorem3,
+        .lorem4 {
+            font-size: 24px;
+            line-height: 1.2;
+            margin-bottom: -50px;
+        }
+
+        .card-1,
+        .card-2,
+        .card-3 {
+            width: 80% !important;
+            margin-left: 0;
+            margin-right: 0;
+            transform: none;
+        }
+
+        .card-1 img,
+        .card-2 img,
+        .card-3 img {
+            width: 100%;
+            top: -45px;
+            margin-left: 0;
+        }
+
+        .divgod {
+            padding-left: 10px;
+            overflow-x: auto;
+        }
+
+        .divgod2 {
+            width: 100%;
+            padding-left: 10px;
+            height: auto;
+        }
+
+        .withindivgod {
+            margin-right: 10px;
+        }
+
+        .bluecard {
+            left: 0;
+            width: 150px;
+            height: 40px;
+            padding: 8px;
+        }
+
+        .bluecard p {
+            font-size: 12px;
+        }
+
+        .btn-blue,
+        .faq-btn {
+            width: 30px;
+            height: 30px;
+        }
+
+        .faq-btn {
+            margin-left: 85%;
+        }
+
+        .footer {
+            width: 100vw;
+            height: auto;
+            padding: 10px 0;
+        }
+
+        /* Hide arrow buttons on mobile */
+        .carousel-control-prev,
+        .carousel-control-next {
+            display: none;
+        }
+
+        /* Make grid layout vertical on mobile */
+        .row {
+            flex-direction: column;
+        }
+
+        .col-md-4 {
+            width: 100%;
+        }
+    }
+
+    /* Tablet Styles */
+    @media (min-width: 768px) and (max-width: 1199px) {
+        .hero-nav-header {
+            font-size: 18px;
+            margin-left: 30px;
+        }
+
+        .login-button,
+        .getstarted-button {
+            font-size: 14px;
+            padding: 6px 12px;
+            margin-left: 20px;
+        }
+
+        .hero-img {
+            height: auto;
+            max-width: 100%;
+        }
+
+        .lorem,
+        .lorem2,
+        .lorem3,
+        .lorem4 {
+            font-size: 30px;
+            line-height: 1.2;
+            margin-bottom: -70px;
+        }
+
+        .card-1,
+        .card-2,
+        .card-3 {
+            width: 45% !important;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .card-1 img,
+        .card-2 img,
+        .card-3 img {
+            width: 100%;
+            top: -65px;
+            margin-left: 0;
+        }
+
+        .divgod {
+            padding-left: 30px;
+            overflow-x: auto;
+        }
+
+        .divgod2 {
+            width: 95%;
+            padding-left: 30px;
+            height: auto;
+        }
+
+        .withindivgod {
+            margin-right: 20px;
+        }
+
+        .bluecard {
+            left: -18px;
+            width: 180px;
+            height: 45px;
+            padding: 10px;
+        }
+
+        .bluecard p {
+            font-size: 14px;
+        }
+
+        .btn-blue,
+        .faq-btn {
+            width: 35px;
+            height: 35px;
+        }
+
+        .faq-btn {
+            margin-left: 90%;
+        }
+
+        .footer {
+            width: 100vw;
+            height: auto;
+            padding: 15px 0;
+        }
+    }
+
+    /* Desktop Styles */
+    @media (min-width: 1200px) {
+        /* No changes needed for large screens */
+    }
         main {
             background-color: white;  
         
@@ -38,7 +237,7 @@ const props = Astro.props
             font-size: 20px;
             margin-top:0;
             margin-left:40px;
-            display: block;
+            display: block; /* Ensure the element behaves like a block element to respect margin */
         }
         .login-button{
             margin-left:700px;
@@ -46,7 +245,7 @@ const props = Astro.props
             font-family: "DM Sans", serif;
             font-optical-sizing: auto;
             color:#FFFCF8;
-            border: 1px solid #FFFCF8; 
+            border: 1px solid #FFFCF8; /* Set border width, style, and color */
             border-radius:10px;
             padding-top:6px;
             padding-bottom:5px;
@@ -61,7 +260,7 @@ const props = Astro.props
             font-family: "DM Sans", serif;
             font-optical-sizing: auto;
             color:#1748EE;
-            border: 1px solid #FFFCF8;
+            border: 1px solid #FFFCF8; /* Set border width, style, and color */
             border-radius:10px;
             padding-top:6px;
             padding-bottom:5px;
@@ -365,27 +564,27 @@ text-align: center;
 }
 
 .btn-blue {
-    background-color:#1748EE; 
-    width: 40px; 
-    height: 40px; 
-    border-radius: 20px; 
-    font-size: 15px;
-    font-weight: bold; 
-    border: none; 
-    cursor: pointer; 
-    box-shadow: 3px 1px; 
+    background-color:#1748EE; /* Button background color */
+    width: 40px; /* Adjusted width for a better button size */
+    height: 40px; /* Adjusted height for a better button size */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 15px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 3px 1px; /* Drop shadow */
     margin-right:10px;
   
 }
 .faq-btn {
-    background-color:transparent;
-    width: 40px; 
-    height: 40px;
-    border-radius: 20px; 
-    font-size: 15px; 
-    font-weight: bold;
-    border: none; 
-    cursor: pointer; 
+    background-color:transparent; /* Button background color */
+    width: 40px; /* Adjusted width for a better button size */
+    height: 40px; /* Adjusted height for a better button size */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 15px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
     margin-right:10px;
     border-style:solid;
     border-color:#1748EE;
@@ -407,15 +606,15 @@ text-align: center;
     width: 10px !important;
     height: 10px !important;
     border-radius: 50% !important;
-    border: 2px solid #1748EE !important;  
-    background-color: transparent !important;  
+    border: 2px solid #1748EE !important;  /* Combined border properties */
+    background-color: transparent !important;  /* Changed to transparent to see border */
     margin: 0 5px !important;
     padding: 0 !important;
     opacity: 0.5;
 }
 
 .carousel-indicators button.active {
-    background-color: #1748EE !important; 
+    background-color: #1748EE !important;  /* Fill with color when active */
     opacity: 1;
 }
 .faq-section {
@@ -538,14 +737,14 @@ text-align: center;
     .hidden-bottom {
   opacity: 0;
   filter: blur(2px);
-  transform: translateY(50px); 
+  transform: translateY(50px); /* Start 50px below */
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .show-bottom {
   opacity: 1;
   filter: blur(0);
-  transform: translateY(0); 
+  transform: translateY(0); /* Move to original position */
 }
 
     .hidden-bottom:nth-child(2) {
@@ -567,7 +766,7 @@ text-align: center;
     <main>
         <nav>
             <a class="hero-nav-header" href='https://anchor-h1v5.onrender.com/signup'>anchor</a>
-          <a href='https://anchor-h1v5.onrender.com/login'><button class="login-button">Login</button></a>
+          <a href='https://anchor-h1v5.onrender.com/signup'><button class="login-button">Login</button></a>
             <a href='https://anchor-h1v5.onrender.com/signup'><button class="getstarted-button">Get Started Today</button></a>
 
         </nav>
@@ -778,10 +977,22 @@ bottom:50px;position:relative;">
     <span class="visually-hidden">Next</span>
 </button>
 
-  <div style='margin:auto;
-  padding:0px;'>
-    <img style='height:600px;width:100%;margin-top:50px;' src='https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Group%201437253218.png'/>
-  </div>
+ <div style="margin: auto; padding: 0;">
+  <img 
+    style="
+      width: 100vw; 
+      height: 600px; 
+      object-fit: cover; 
+      margin-top: 50px; 
+   border-top-left-radius: 5em 5em;
+      border-top-right-radius: 5em 5em;
+    " 
+    src="https://raw.githubusercontent.com/ArnavVashisthCodingAccountnew/godsign/refs/heads/main/Group%201437253218.png" 
+    alt="Rounded Image"
+  />
+</div>
+  
+
   <div class='faq-section'>
     <p class='lorem3 hidden' style='text-align:center;algin-self:center;justify-content:center;margin-bottom:60px;'>Frequently Asked Questions</p>
   <div class='card-wrapper'><div class='card'><p class='id'>Is Anchor free to use?</p>  <button 
@@ -819,6 +1030,9 @@ bottom:50px;position:relative;">
     <p style='position:relative;bottom:-25px;'>MADE WITH 🤍 by CORE</p>
 </section>
     </main>
+<script>
+  
+</script>
 <script>
     const scroller = document.querySelector('.divgod');
     const prevBtn = document.getElementById('prevBtn');
